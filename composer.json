@@ -1,5 +1,5 @@
 {
-    "name": ":vendor/:package_name",
+    "name": "pxgamer/:package_name",
     "type": "library",
     "description": ":package_description",
     "license": "MIT",
@@ -12,12 +12,12 @@
     },
     "autoload": {
         "psr-4": {
-            ":vendor\\:package_name\\": "src"
+            "pxgamer\\:package_name\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            ":vendor\\:package_name\\": "tests"
+            "pxgamer\\:package_name\\": "tests"
         }
     },
     "scripts": {
