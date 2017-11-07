@@ -5,17 +5,17 @@ define('COL_HELP', 1);
 define('COL_DEFAULT', 2);
 
 $fields = [
-    'author_name' =>            ['Your name',             '',                                                'pxgamer'],
-    'author_github_username' => ['Your Github username',  '<username> in https://github.com/username',       'pxgamer'],
-    'author_email' =>           ['Your email address',    '',                                                'owzie123@gmail.com'],
-    'author_twitter' =>         ['Your twitter username', '',                                                '@pxgamer112'],
-    'author_website' =>         ['Your website',          '',                                                'https://github.com/{author_github_username}'],
+    'author_name'            => ['Your name', '', 'pxgamer'],
+    'author_github_username' => ['Your Github username', '<username> in https://github.com/username', 'pxgamer'],
+    'author_email'           => ['Your email address', '', 'owzie123@gmail.com'],
+    'author_twitter'         => ['Your twitter username', '', '@pxgamer112'],
+    'author_website'         => ['Your website', '', 'https://github.com/{author_github_username}'],
 
-    'package_vendor' =>         ['Package vendor',        '<vendor> in https://github.com/vendor/package',   '{author_github_username}'],
-    'package_name' =>           ['Package name',          '<package> in https://github.com/vendor/package',  ''],
-    'package_description' =>    ['Package very short description',   '',                                     ''],
+    'package_vendor'      => ['Package vendor', '<vendor> in https://github.com/vendor/package', '{author_github_username}'],
+    'package_name'        => ['Package name', '<package> in https://github.com/vendor/package', ''],
+    'package_description' => ['Package very short description', '', ''],
 
-    'psr4_namespace' =>         ['PSR-4 namespace',       'usually, Vendor\\Package',                        '{package_vendor}\\{package_name}'],
+    'psr4_namespace' => ['PSR-4 namespace', 'usually, Vendor\\Package', '{package_vendor}\\{package_name}'],
 ];
 
 $values = [];
@@ -89,12 +89,12 @@ do {
     echo "----------------------------------------------------------------------\n";
 
     foreach ($fields as $f => $field) {
-        $default = isset($field[COL_DEFAULT]) ? interpolate($field[COL_DEFAULT], $values): '';
+        $default = isset($field[COL_DEFAULT]) ? interpolate($field[COL_DEFAULT], $values) : '';
         $prompt = sprintf(
             '%s%s%s: ',
             $field[COL_DESCRIPTION],
-            $field[COL_HELP] ? ' (' . $field[COL_HELP] . ')': '',
-            $field[COL_DEFAULT] !== '' ? ' [' . $default . ']': ''
+            $field[COL_HELP] ? ' (' . $field[COL_HELP] . ')' : '',
+            $field[COL_DEFAULT] !== '' ? ' [' . $default . ']' : ''
         );
         $values[$f] = read_from_console($prompt);
         if (empty($values[$f])) {
