@@ -13,6 +13,7 @@ $fields = [
     'package_vendor'      => ['Package vendor', '<vendor> in https://github.com/vendor/package', '{author_github_username}'],
     'package_name'        => ['Package name', '<package> in https://github.com/vendor/package', ''],
     'package_description' => ['Package very short description', '', ''],
+    'styleci'             => ['Style CI ID', '', ''],
 
     'psr4_namespace' => ['PSR-4 namespace', 'usually, Vendor\\Package', '{package_vendor}\\{package_name}'],
 ];
@@ -43,6 +44,9 @@ $replacements = [
     },
     ':package_description'         => function () use (&$values) {
         return $values['package_description'];
+    },
+    ':styleci'                     => function () use (&$values) {
+        return $values['styleci'];
     },
     'League\\Skeleton'             => function () use (&$values) {
         return $values['psr4_namespace'];
