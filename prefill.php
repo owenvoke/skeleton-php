@@ -4,18 +4,10 @@ define('COL_HELP', 1);
 define('COL_DEFAULT', 2);
 
 $fields = [
-    'author_name'            => ['Your name', '', 'pxgamer'],
-    'author_github_username' => ['Your Github username', '<username> in https://github.com/username', 'pxgamer'],
-    'author_email'           => ['Your email address', '', 'owzie123@gmail.com'],
-    'author_twitter'         => ['Your twitter username', '', '@pxgamer112'],
-    'author_website'         => ['Your website', '', 'https://github.com/{author_github_username}'],
-
-    'package_vendor'      => ['Package vendor', '<vendor> in https://github.com/vendor/package', '{author_github_username}'],
     'package_name'        => ['Package name', '<package> in https://github.com/vendor/package', ''],
     'package_description' => ['Package very short description', '', ''],
     'styleci'             => ['Style CI ID', '', ''],
-
-    'psr4_namespace' => ['PSR-4 namespace', 'usually, Vendor\\Package', '{package_vendor}\\{package_name}'],
+    'psr4_namespace'      => ['PSR-4 namespace', 'usually, Vendor\\Package', 'pxgamer\\{package_name}'],
 ];
 
 $values = [];
@@ -23,21 +15,6 @@ $values = [];
 $replacements = [
     ':vendor\\\\:package_name\\\\' => function () use (&$values) {
         return str_replace('\\', '\\\\', $values['psr4_namespace']) . '\\\\';
-    },
-    ':author_name'                 => function () use (&$values) {
-        return $values['author_name'];
-    },
-    ':author_username'             => function () use (&$values) {
-        return $values['author_github_username'];
-    },
-    ':author_website'              => function () use (&$values) {
-        return $values['author_website'] ?: ('https://github.com/' . $values['author_github_username']);
-    },
-    ':author_email'                => function () use (&$values) {
-        return $values['author_email'] ?: ($values['author_github_username'] . '@example.com');
-    },
-    ':vendor'                      => function () use (&$values) {
-        return $values['package_vendor'];
     },
     ':package_name'                => function () use (&$values) {
         return $values['package_name'];
@@ -131,4 +108,3 @@ foreach ($files as $f) {
 }
 
 echo "Done.\n";
-echo "Now you should remove the file '" . basename(__FILE__) . "'.\n";

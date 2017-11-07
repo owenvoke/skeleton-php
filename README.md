@@ -27,7 +27,7 @@ vendor/
 Via Composer
 
 ``` bash
-$ composer require :vendor/:package_name
+$ composer require pxgamer/:package_name
 ```
 
 ## Usage
@@ -53,28 +53,28 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT
 
 ## Security
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+If you discover any security related issues, please email owzie123@gmail.com instead of using the issue tracker.
 
 ## Credits
 
-- [:author_name][link-author]
+- [pxgamer][link-author]
 - [All Contributors][link-contributors]
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/:vendor/:package_name.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/pxgamer/:package_name.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/:vendor/:package_name/master.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/pxgamer/:package_name/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/:styleci/shield
-[ico-code-quality]: https://img.shields.io/codecov/c/github/:vendor/:package_name.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/:vendor/:package_name.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/codecov/c/github/pxgamer/:package_name.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/pxgamer/:package_name.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/:vendor/:package_name
-[link-travis]: https://travis-ci.org/:vendor/:package_name
+[link-packagist]: https://packagist.org/packages/pxgamer/:package_name
+[link-travis]: https://travis-ci.org/pxgamer/:package_name
 [link-styleci]: https://styleci.io/repos/:styleci
-[link-code-quality]: https://codecov.io/gh/:vendor/:package_name
-[link-downloads]: https://packagist.org/packages/:vendor/:package_name
-[link-author]: https://github.com/:author_username
+[link-code-quality]: https://codecov.io/gh/pxgamer/:package_name
+[link-downloads]: https://packagist.org/packages/pxgamer/:package_name
+[link-author]: https://github.com/pxgamer
 [link-contributors]: ../../contributors
