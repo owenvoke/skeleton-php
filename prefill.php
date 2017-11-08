@@ -14,7 +14,7 @@ $fields = [
 $values = [];
 
 $replacements = [
-    ':vendor\\\\:package_name\\\\' => function () use (&$values) {
+    'pxgamer\\\\:package_name\\\\' => function () use (&$values) {
         return str_replace('\\', '\\\\', $values['psr4_namespace']) . '\\\\';
     },
     ':package_name'                => function () use (&$values) {
