@@ -12,7 +12,7 @@
 ## Structure
 
 ```
-bin/        
+bin/
 config/
 src/
 tests/
