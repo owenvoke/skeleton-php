@@ -23,13 +23,13 @@ vendor/
 
 Via Composer
 
-``` bash
+```bash
 $ composer require pxgamer/:package_name
 ```
 
 ## Usage
 
-``` php
+```php
 $skeleton = new League\Skeleton();
 echo $skeleton->echoPhrase('Hello, League!');
 ```
@@ -40,7 +40,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Testing
 
-``` bash
+```bash
 $ composer test
 ```
 
