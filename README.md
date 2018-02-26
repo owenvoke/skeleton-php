@@ -9,16 +9,6 @@
 
 :package_description
 
-## Structure
-
-```
-bin/
-config/
-src/
-tests/
-vendor/
-```
-
 ## Install
 
 Via Composer
