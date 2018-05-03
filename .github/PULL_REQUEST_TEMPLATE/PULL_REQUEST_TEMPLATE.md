@@ -1,3 +1,9 @@
+---
+name: Pull Request
+about: Open a pull request with new changes
+
+---
+
 <!--- Provide a general summary of your changes in the Title above -->
 
 ## Description
