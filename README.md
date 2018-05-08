@@ -59,7 +59,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-downloads]: https://img.shields.io/packagist/dt/pxgamer/:package_name.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/pxgamer/:package_name
-[link-travis]: https://travis-ci.org/pxgamer/:package_name
+[link-travis]: https://travis-ci.com/pxgamer/:package_name
 [link-styleci]: https://styleci.io/repos/:styleci
 [link-code-quality]: https://codecov.io/gh/pxgamer/:package_name
 [link-downloads]: https://packagist.org/packages/pxgamer/:package_name
