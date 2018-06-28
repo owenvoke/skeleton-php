@@ -1,9 +1,3 @@
----
-name: General Issue
-about: Create a report to help us improve
-
----
-
 <!-- Provide a general summary of the issue in the Title above -->
 
 ## Detailed description
