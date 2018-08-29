@@ -11,7 +11,7 @@ matrix:
     - php: nightly
 
 # This triggers builds to run on the new TravisCI infrastructure.
-# See: https://docs.travis-ci.com/user/reference/trusty#Container-based-with-sudo%3A-false
+# See: https://docs.travis-ci.com/user/reference/trusty#container-based-with-sudo-false
 sudo: false
 
 ## Cache composer
