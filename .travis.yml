@@ -2,12 +2,12 @@ dist: trusty
 language: php
 
 php:
-  - 7.1
-  - 7.2
-  - nightly
+- 7.1
+- 7.2
+- nightly
 
 matrix:
-  allow_failures:
+    allow_failures:
     - php: nightly
 
 # This triggers builds to run on the new TravisCI infrastructure.
@@ -16,15 +16,15 @@ sudo: false
 
 ## Cache composer
 cache:
-  directories:
+    directories:
     - $HOME/.composer/cache
 
 before_script:
-  - travis_retry composer update --no-interaction --prefer-dist
+- travis_retry composer update --no-interaction --prefer-dist
 
 script:
-  - vendor/bin/phpcs --standard=psr2 src/
-  - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+- vendor/bin/phpcs --standard=psr2 src/
+- vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
