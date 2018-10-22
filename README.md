@@ -19,10 +19,7 @@ $ composer require pxgamer/:package_name
 
 ## Usage
 
-```php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
-```
+...
 
 ## Change log
 
