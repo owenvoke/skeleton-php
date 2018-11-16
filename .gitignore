@@ -1,5 +1,5 @@
-build
-composer.lock
-vendor
-phpcs.xml
-phpunit.xml
+/build
+/vendor
+/composer.lock
+/phpcs.xml
+/phpunit.xml
