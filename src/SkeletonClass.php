@@ -1,6 +1,8 @@
 <?php
 
-namespace League\Skeleton;
+declare(strict_types=1);
+
+namespace pxgamer\:package_name;
 
 class SkeletonClass
 {
