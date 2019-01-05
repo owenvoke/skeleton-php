@@ -21,7 +21,7 @@ class SkeletonClass
      *
      * @return string Returns the phrase passed in
      */
-    public function echoPhrase($phrase)
+    public function echoPhrase(string $phrase): string
     {
         return $phrase;
     }
