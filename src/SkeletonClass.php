@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace pxgamer\:package_name;
+namespace pxgamer\Skeleton;
 
 class SkeletonClass
 {
