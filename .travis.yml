@@ -19,7 +19,7 @@ before_script:
 - travis_retry composer update --no-interaction --prefer-dist
 
 script:
-- vendor/bin/phpcs src
+- vendor/bin/phpcs --standard=psr2 src/
 - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
 
 after_success:
