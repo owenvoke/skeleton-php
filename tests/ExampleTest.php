@@ -6,7 +6,7 @@ namespace pxgamer\Skeleton;
 
 use PHPUnit\Framework\TestCase;
 
-class ExampleTest extends TestCase
+final class ExampleTest extends TestCase
 {
     /** @test */
     public function trueIsTrue(): void
