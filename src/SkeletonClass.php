@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace pxgamer\Skeleton;
 
-class SkeletonClass
+final class SkeletonClass
 {
     public function __construct()
     {
