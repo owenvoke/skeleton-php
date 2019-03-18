@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 class ExampleTest extends TestCase
 {
     /** @test */
-    public function trueIsTrue()
+    public function trueIsTrue(): void
     {
         $this->assertTrue(true);
     }
