@@ -6,7 +6,7 @@ We accept contributions via Pull Requests on [Github](https://github.com/pxgamer
 
 ## Pull Requests
 
-- **[PSR-2 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)** - Check the code style with ``$ composer check-style`` and fix it with ``$ composer fix-style``.
+- **Laravel Coding Standard** - This is automatically linted by [Style CI](https://styleci.io).
 
 - **Add tests!** - If possible, try to add tests to support your patch.
 
