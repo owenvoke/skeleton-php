@@ -11,12 +11,12 @@
     },
     "autoload": {
         "psr-4": {
-            "pxgamer\\:package_name\\": "src"
+            "pxgamer\\Skeleton\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "pxgamer\\:package_name\\": "tests"
+            "pxgamer\\Skeleton\\": "tests"
         }
     },
     "scripts": {
