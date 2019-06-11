@@ -16,7 +16,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "pxgamer\\Skeleton\\": "tests"
+            "pxgamer\\Skeleton\\Tests\\": "tests"
         }
     },
     "scripts": {
