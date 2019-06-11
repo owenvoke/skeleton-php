@@ -113,4 +113,4 @@ foreach ($files as $f) {
 }
 
 echo "Done.\n";
-echo "Now you can remove the file '" . basename(__FILE__) . "'.\n";
+echo "Now you can remove the file '".basename(__FILE__)."'.\n";
