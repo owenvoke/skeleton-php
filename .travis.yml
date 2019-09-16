@@ -7,8 +7,8 @@ php:
 
 ## Cache composer
 cache:
-    directories:
-    - $HOME/.composer/cache
+  directories:
+  - $HOME/.composer/cache
 
 before_script:
 - travis_retry composer update --no-interaction --prefer-dist
