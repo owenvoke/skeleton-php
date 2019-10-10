@@ -20,7 +20,8 @@
         }
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "test:dox": "@test --testdox"
     },
     "config": {
         "sort-packages": true
