@@ -17,6 +17,9 @@ $replacements = [
     'pxgamer\\\\:package_name\\\\' => function () use (&$values) {
         return str_replace('\\', '\\\\', $values['psr4_namespace']).'\\\\';
     },
+    'pxgamer\\\\Skeleton\\\\' => function () use (&$values) {
+        return str_replace('\\', '\\\\', $values['psr4_namespace']).'\\\\';
+    },
     ':package_name'                => function () use (&$values) {
         return $values['package_name'];
     },
