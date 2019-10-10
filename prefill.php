@@ -29,7 +29,7 @@ $replacements = [
     ':styleci'                     => function () use (&$values) {
         return $values['styleci'];
     },
-    'League\\Skeleton'             => function () use (&$values) {
+    'pxgamer\\Skeleton'             => function () use (&$values) {
         return $values['psr4_namespace'];
     },
 ];
