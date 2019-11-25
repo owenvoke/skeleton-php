@@ -1,0 +1,30 @@
+name: Continuous Integration
+
+on: ['push', 'pull_request']
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@master
+      with:
+        php-version: '7.3'
+
+    - name: Install Composer dependencies
+      run: |
+        composer global require hirak/prestissimo
+        composer update --no-interaction --prefer-dist
+
+    - name: PHPUnit Testing
+      run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
