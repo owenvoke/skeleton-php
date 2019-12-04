@@ -10,8 +10,9 @@ jobs:
       fail-fast: true
       matrix:
         php: [7.3]
+        dependency-version: [prefer-lowest, prefer-stable]
 
-    name: CI - PHP ${{ matrix.php }}
+    name: CI - PHP ${{ matrix.php }} (${{ matrix.dependency-version }})
 
     steps:
 
@@ -33,7 +34,7 @@ jobs:
     - name: Install Composer dependencies
       run: |
         composer global require hirak/prestissimo
-        composer update --no-interaction --prefer-dist --no-suggest
+        composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
 
     - name: PHPUnit Testing
       run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
