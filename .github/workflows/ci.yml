@@ -4,22 +4,37 @@ on: ['push', 'pull_request']
 
 jobs:
   ci:
-    name: CI
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        php: [7.3]
+        dependency-version: [prefer-lowest, prefer-stable]
+
+    name: CI - PHP ${{ matrix.php }} (${{ matrix.dependency-version }})
+
     steps:
-    
+
     - name: Checkout
       uses: actions/checkout@v1
+
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.composer/cache/files
+        key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
 
     - name: Setup PHP
       uses: shivammathur/setup-php@master
       with:
-        php-version: '7.3'
+        php-version: ${{ matrix.php }}
+        # extension-csv: mbstring, zip
 
     - name: Install Composer dependencies
       run: |
         composer global require hirak/prestissimo
-        composer update --no-interaction --prefer-dist
+        composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
 
     - name: PHPUnit Testing
       run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
