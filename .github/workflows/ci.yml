@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [7.3]
+        php: [7.4]
         dependency-version: [prefer-lowest, prefer-stable]
 
     name: CI - PHP ${{ matrix.php }} (${{ matrix.dependency-version }})
@@ -26,10 +26,10 @@ jobs:
         key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
 
     - name: Setup PHP
-      uses: shivammathur/setup-php@master
+      uses: shivammathur/setup-php@v1
       with:
         php-version: ${{ matrix.php }}
-        # extension-csv: mbstring, zip
+        extensions: mbstring, zip
 
     - name: Install Composer dependencies
       run: |
