@@ -30,6 +30,7 @@ jobs:
       with:
         php-version: ${{ matrix.php }}
         extensions: mbstring, zip
+        coverage: pcov
 
     - name: Install Composer dependencies
       run: |
