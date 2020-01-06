@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
+[![Build Status][ico-github-actions]][link-github-actions]
 [![Style CI][ico-styleci]][link-styleci]
 [![Code Coverage][ico-code-coverage]][link-code-coverage]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -50,13 +50,13 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [ico-version]: https://img.shields.io/packagist/v/pxgamer/:package_name.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/pxgamer/:package_name/master.svg?style=flat-square
+[ico-github-actions]: https://img.shields.io/github/workflow/status/pxgamer/:package_name/Continuous%20Integration.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/:styleci/shield
 [ico-code-coverage]: https://img.shields.io/codecov/c/github/pxgamer/:package_name.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/pxgamer/:package_name.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/pxgamer/:package_name
-[link-travis]: https://travis-ci.com/pxgamer/:package_name
+[link-github-actions]: https://github.com/pxgamer/:package_name/actions
 [link-styleci]: https://styleci.io/repos/:styleci
 [link-code-coverage]: https://codecov.io/gh/pxgamer/:package_name
 [link-downloads]: https://packagist.org/packages/pxgamer/:package_name
