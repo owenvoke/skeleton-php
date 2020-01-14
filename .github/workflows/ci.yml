@@ -37,6 +37,9 @@ jobs:
         composer global require hirak/prestissimo
         composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
 
+    - name: PHPStan Analysis
+      run: vendor/bin/phpstan analyse
+
     - name: PHPUnit Testing
       run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
 
