@@ -37,7 +37,7 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](.github
 
 ## Security
 
-If you discover any security related issues, please email security@pxgamer.xyz instead of using the issue tracker.
+If you discover any security related issues, please email security@voke.dev instead of using the issue tracker.
 
 ## Credits
 
