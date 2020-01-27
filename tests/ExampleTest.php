@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace pxgamer\Skeleton\Tests;
+namespace OwenVoke\Skeleton\Tests;
 
 use PHPUnit\Framework\TestCase;
 

@@ -8,16 +8,16 @@ $fields = [
     'package_name'        => ['Package name', '<package> in https://github.com/vendor/package', ''],
     'package_description' => ['Package very short description', '', ''],
     'styleci'             => ['Style CI ID', '', ''],
-    'psr4_namespace'      => ['PSR-4 namespace', 'usually, Vendor\\Package', 'pxgamer\\{package_name}'],
+    'psr4_namespace'      => ['PSR-4 namespace', 'usually, Vendor\\Package', 'OwenVoke\\{package_name}'],
 ];
 
 $values = [];
 
 $replacements = [
-    'pxgamer\\\\:package_name\\\\' => function () use (&$values) {
+    'OwenVoke\\\\:package_name\\\\' => function () use (&$values) {
         return str_replace('\\', '\\\\', $values['psr4_namespace']).'\\\\';
     },
-    'pxgamer\\\\Skeleton\\\\' => function () use (&$values) {
+    'OwenVoke\\\\Skeleton\\\\' => function () use (&$values) {
         return str_replace('\\', '\\\\', $values['psr4_namespace']).'\\\\';
     },
     ':package_name'                => function () use (&$values) {
@@ -29,7 +29,7 @@ $replacements = [
     ':styleci'                     => function () use (&$values) {
         return $values['styleci'];
     },
-    'pxgamer\\Skeleton'             => function () use (&$values) {
+    'OwenVoke\\Skeleton'             => function () use (&$values) {
         return $values['psr4_namespace'];
     },
 ];

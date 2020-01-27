@@ -1,5 +1,5 @@
 {
-    "name": "pxgamer/:package_name",
+    "name": "owenvoke/:package_name",
     "type": "library",
     "description": ":package_description",
     "license": "MIT",
@@ -12,12 +12,12 @@
     },
     "autoload": {
         "psr-4": {
-            "pxgamer\\Skeleton\\": "src"
+            "OwenVoke\\Skeleton\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "pxgamer\\Skeleton\\Tests\\": "tests"
+            "OwenVoke\\Skeleton\\Tests\\": "tests"
         }
     },
     "scripts": {
