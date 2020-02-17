@@ -30,12 +30,11 @@ jobs:
       with:
         php-version: ${{ matrix.php }}
         extensions: mbstring, zip
+        tools: prestissimo
         coverage: pcov
 
     - name: Install Composer dependencies
-      run: |
-        composer global require hirak/prestissimo
-        composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
+      run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
 
     - name: PHPStan Analysis
       run: vendor/bin/phpstan analyse
