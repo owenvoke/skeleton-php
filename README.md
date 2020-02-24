@@ -73,6 +73,6 @@ Read more about Treeware at [treeware.earth][link-treeware].
 [link-code-coverage]: https://codecov.io/gh/owenvoke/:package_name
 [link-downloads]: https://packagist.org/packages/owenvoke/:package_name
 [link-treeware]: https://treeware.earth
-[link-treeware-gifting]: https://offset.earth/treeware?gift-trees
+[link-treeware-gifting]: https://offset.earth/owenvoke?gift-trees
 [link-author]: https://github.com/owenvoke
 [link-contributors]: ../../contributors
