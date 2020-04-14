@@ -34,7 +34,7 @@ jobs:
         coverage: pcov
 
     - name: Install Composer dependencies
-      run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
+      run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist
 
     - name: PHPStan Analysis
       run: vendor/bin/phpstan analyse
