@@ -12,12 +12,12 @@
     },
     "autoload": {
         "psr-4": {
-            "OwenVoke\\Skeleton\\": "src"
+            "OwenVoke\\Skeleton\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "OwenVoke\\Skeleton\\Tests\\": "tests"
+            "OwenVoke\\Skeleton\\Tests\\": "tests/"
         }
     },
     "scripts": {
