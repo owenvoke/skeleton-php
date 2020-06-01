@@ -1,5 +1,5 @@
 {
-    "name": "owenvoke/:package_name",
+    "name": "owenvoke/skeleton-php",
     "type": "library",
     "description": ":package_description",
     "license": "MIT",

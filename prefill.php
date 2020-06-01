@@ -20,6 +20,9 @@ $replacements = [
     'OwenVoke\\\\Skeleton\\\\' => function () use (&$values) {
         return str_replace('\\', '\\\\', $values['psr4_namespace']).'\\\\';
     },
+    'skeleton-php'                => function () use (&$values) {
+        return $values['package_name'];
+    },
     ':package_name'                => function () use (&$values) {
         return $values['package_name'];
     },
