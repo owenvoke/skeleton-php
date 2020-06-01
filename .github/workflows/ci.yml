@@ -36,10 +36,10 @@ jobs:
     - name: Install Composer dependencies
       run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist
 
-    - name: PHPStan Analysis
+    - name: Type Checks
       run: vendor/bin/phpstan analyse
 
-    - name: PHPUnit Testing
+    - name: Unit Tests
       run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
 
     - name: Upload coverage to Codecov
