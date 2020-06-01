@@ -120,4 +120,4 @@ foreach ($files as $f) {
 }
 
 echo "Done.\n";
-echo "Now you can remove the file '".basename(__FILE__)."'.\n";
+printf("Now you can remove this file '%s'.\n", basename(__FILE__));
