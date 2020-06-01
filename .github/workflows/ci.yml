@@ -40,7 +40,7 @@ jobs:
       run: vendor/bin/phpstan analyse
 
     - name: Unit Tests
-      run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+      run: vendor/bin/pest --colors=always --coverage-text --coverage-clover=coverage.clover
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
