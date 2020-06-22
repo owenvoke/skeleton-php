@@ -31,7 +31,7 @@ jobs:
       run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist
 
     - name: Type Checks
-      run: vendor/bin/phpstan analyse
+      run: vendor/bin/psalm
 
     - name: Unit Tests
       run: vendor/bin/pest --colors=always --coverage-text --coverage-clover=coverage.clover
