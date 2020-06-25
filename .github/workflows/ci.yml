@@ -37,7 +37,6 @@ jobs:
       run: vendor/bin/pest --colors=always --coverage-text --coverage-clover=coverage.clover
 
     - name: Upload coverage to Codecov
-      if: secrets.CODECOV_TOKEN != null
       uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
