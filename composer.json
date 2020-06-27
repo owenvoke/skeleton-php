@@ -8,7 +8,7 @@
     },
     "require-dev": {
         "pestphp/pest": "^0.2",
-        "phpstan/phpstan": "^0.12.28",
+        "phpstan/phpstan": "^0.12.31",
         "symfony/var-dumper": "^5.1"
     },
     "autoload": {
@@ -22,8 +22,12 @@
         }
     },
     "scripts": {
-        "test": "pest",
-        "analyse": "phpstan analyse"
+        "test:types": "phpstan analyse --ansi --memory-limit=0",
+        "test:unit": "pest --colors=always",
+        "test": [
+            "@test:types",
+            "@test:unit"
+        ]
     },
     "config": {
         "sort-packages": true
