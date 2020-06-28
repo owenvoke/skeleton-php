@@ -1,4 +1,4 @@
-# :package_name
+# skeleton-php
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -15,7 +15,7 @@
 Via Composer
 
 ```bash
-$ composer require owenvoke/:package_name
+$ composer require owenvoke/skeleton-php
 ```
 
 ## Usage
@@ -59,19 +59,19 @@ You can buy trees [here][link-treeware-gifting].
 
 Read more about Treeware at [treeware.earth][link-treeware].
 
-[ico-version]: https://img.shields.io/packagist/v/owenvoke/:package_name.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/owenvoke/skeleton-php.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-github-actions]: https://img.shields.io/github/workflow/status/owenvoke/:package_name/CI.svg?style=flat-square
+[ico-github-actions]: https://img.shields.io/github/workflow/status/owenvoke/skeleton-php/CI.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/:styleci/shield
-[ico-code-coverage]: https://img.shields.io/codecov/c/github/owenvoke/:package_name.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/owenvoke/:package_name.svg?style=flat-square
+[ico-code-coverage]: https://img.shields.io/codecov/c/github/owenvoke/skeleton-php.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/owenvoke/skeleton-php.svg?style=flat-square
 [ico-treeware-gifting]: https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/owenvoke/:package_name
-[link-github-actions]: https://github.com/owenvoke/:package_name/actions
+[link-packagist]: https://packagist.org/packages/owenvoke/skeleton-php
+[link-github-actions]: https://github.com/owenvoke/skeleton-php/actions
 [link-styleci]: https://styleci.io/repos/:styleci
-[link-code-coverage]: https://codecov.io/gh/owenvoke/:package_name
-[link-downloads]: https://packagist.org/packages/owenvoke/:package_name
+[link-code-coverage]: https://codecov.io/gh/owenvoke/skeleton-php
+[link-downloads]: https://packagist.org/packages/owenvoke/skeleton-php
 [link-treeware]: https://treeware.earth
 [link-treeware-gifting]: https://offset.earth/owenvoke?gift-trees
 [link-author]: https://github.com/owenvoke
