@@ -73,6 +73,6 @@ Read more about Treeware at [treeware.earth][link-treeware].
 [link-code-coverage]: https://codecov.io/gh/owenvoke/skeleton-php
 [link-downloads]: https://packagist.org/packages/owenvoke/skeleton-php
 [link-treeware]: https://treeware.earth
-[link-treeware-gifting]: https://offset.earth/owenvoke?gift-trees
+[link-treeware-gifting]: https://ecologi.com/owenvoke?gift-trees
 [link-author]: https://github.com/owenvoke
 [link-contributors]: ../../contributors
