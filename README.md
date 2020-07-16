@@ -60,7 +60,7 @@ Read more about Treeware at [treeware.earth][link-treeware].
 
 [ico-version]: https://img.shields.io/packagist/v/owenvoke/skeleton-php.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-github-actions]: https://img.shields.io/github/workflow/status/owenvoke/skeleton-php/CI.svg?style=flat-square
+[ico-github-actions]: https://img.shields.io/github/workflow/status/owenvoke/skeleton-php/Tests.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/:styleci/shield
 [ico-downloads]: https://img.shields.io/packagist/dt/owenvoke/skeleton-php.svg?style=flat-square
 [ico-treeware-gifting]: https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen?style=flat-square
