@@ -9,6 +9,7 @@ jobs:
     name: Rector
 
     steps:
+
     - name: Checkout
       uses: actions/checkout@v2
 
@@ -35,6 +36,7 @@ jobs:
     name: PHPStan (${{ matrix.dependency-version }})
 
     steps:
+
     - name: Checkout
       uses: actions/checkout@v2
 
@@ -50,3 +52,16 @@ jobs:
 
     - name: Run PHPStan
       run: vendor/bin/phpstan analyse
+
+  backwards-compatability:
+    runs-on: ubuntu-latest
+
+    name: Backwards Compatibility
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Run Roave Backward Compatibility Check
+      uses: docker://nyholm/roave-bc-check-ga
