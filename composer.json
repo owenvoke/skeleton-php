@@ -4,11 +4,11 @@
     "description": ":package_description",
     "license": "MIT",
     "require": {
-        "php": "^7.4"
+        "php": "^7.4 || ^8.0"
     },
     "require-dev": {
-        "pestphp/pest": "^0.2",
-        "phpstan/phpstan": "^0.12.31",
+        "pestphp/pest": "^0.3",
+        "phpstan/phpstan": "^0.12.36",
         "rector/rector-prefixed": "^0.7.63",
         "symfony/var-dumper": "^5.1"
     },
