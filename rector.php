@@ -24,5 +24,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         SetList::SOLID,
     ]);
 
-    $parameters->set(Option::PATHS, [__DIR__ . '/src', __DIR__ . '/tests']);
+    $parameters->set(Option::PATHS, [__DIR__.'/src', __DIR__.'/tests']);
 };
