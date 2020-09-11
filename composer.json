@@ -9,7 +9,7 @@
     "require-dev": {
         "pestphp/pest": "^0.3",
         "phpstan/phpstan": "^0.12.40",
-        "rector/rector-prefixed": "^0.7.65",
+        "rector/rector-prefixed": "^0.8.6",
         "symfony/var-dumper": "^5.1"
     },
     "autoload": {
