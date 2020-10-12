@@ -7,7 +7,7 @@
         "php": "^7.4 || ^8.0"
     },
     "require-dev": {
-        "pestphp/pest": "^0.3",
+        "pestphp/pest": "^0.3.8",
         "phpstan/phpstan": "^0.12.48",
         "rector/rector-prefixed": "^0.8.15",
         "symfony/var-dumper": "^5.1"
