@@ -9,7 +9,6 @@
     "require-dev": {
         "pestphp/pest": "^0.3.10",
         "phpstan/phpstan": "^0.12.57",
-        "rector/rector-prefixed": "^0.8.48",
         "symfony/var-dumper": "^5.1"
     },
     "autoload": {
@@ -23,12 +22,9 @@
         }
     },
     "scripts": {
-        "lint": "rector process src",
-        "test:lint": "rector process src --dry-run",
         "test:types": "phpstan analyse --ansi --memory-limit=0",
         "test:unit": "pest --colors=always",
         "test": [
-            "@test:lint",
             "@test:types",
             "@test:unit"
         ]
