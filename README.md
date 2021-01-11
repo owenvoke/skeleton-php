@@ -13,7 +13,7 @@
 
 Via Composer
 
-```bash
+```shell
 $ composer require owenvoke/skeleton-php
 ```
 
@@ -27,7 +27,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Testing
 
-```bash
+```shell
 $ composer test
 ```
 
