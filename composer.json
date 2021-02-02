@@ -8,7 +8,7 @@
     },
     "require-dev": {
         "pestphp/pest": "^1.0",
-        "phpstan/phpstan": "^0.12.65",
+        "phpstan/phpstan": "^0.12.71",
         "symfony/var-dumper": "^5.1"
     },
     "autoload": {
