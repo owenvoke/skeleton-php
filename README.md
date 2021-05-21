@@ -14,7 +14,7 @@
 Via Composer
 
 ```shell
-$ composer require owenvoke/skeleton-php
+composer require owenvoke/skeleton-php
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 ## Testing
 
 ```shell
-$ composer test
+composer test
 ```
 
 ## Contributing
