@@ -7,8 +7,8 @@
         "php": "^7.4 || ^8.0"
     },
     "require-dev": {
-        "pestphp/pest": "^1.2",
-        "phpstan/phpstan": "^0.12.87",
+        "pestphp/pest": "^1.4",
+        "phpstan/phpstan": "^0.12.89",
         "symfony/var-dumper": "^5.1"
     },
     "autoload": {
