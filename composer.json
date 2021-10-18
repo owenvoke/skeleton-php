@@ -9,7 +9,7 @@
     "require-dev": {
         "pestphp/pest": "^1.20",
         "phpstan/phpstan": "^0.12.99",
-        "symfony/var-dumper": "^5.1"
+        "symfony/var-dumper": "^5.3.8"
     },
     "autoload": {
         "psr-4": {
