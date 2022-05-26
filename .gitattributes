@@ -9,6 +9,7 @@
 /.github            export-ignore
 /.gitignore         export-ignore
 /.styleci.yml       export-ignore
+/CHANGELOG.md       export-ignore
 /docs               export-ignore
 /phpstan.neon.dist  export-ignore
 /phpunit.xml.dist   export-ignore
