@@ -5,10 +5,9 @@ define('COL_HELP', 1);
 define('COL_DEFAULT', 2);
 
 $fields = [
-    'package_name'        => ['Package name', '<package> in https://github.com/vendor/package', ''],
+    'package_name' => ['Package name', '<package> in https://github.com/vendor/package', ''],
     'package_description' => ['Package very short description', '', ''],
-    'styleci'             => ['Style CI ID', '', ''],
-    'psr4_namespace'      => ['PSR-4 namespace', 'usually, Vendor\\Package', 'OwenVoke\\{package_name}'],
+    'psr4_namespace' => ['PSR-4 namespace', 'usually, Vendor\\Package', 'OwenVoke\\{package_name}'],
 ];
 
 $values = [];
@@ -20,19 +19,16 @@ $replacements = [
     'OwenVoke\\\\Skeleton\\\\' => function () use (&$values) {
         return str_replace('\\', '\\\\', $values['psr4_namespace']).'\\\\';
     },
-    'skeleton-php'                => function () use (&$values) {
+    'skeleton-php' => function () use (&$values) {
         return $values['package_name'];
     },
-    ':package_name'                => function () use (&$values) {
+    ':package_name' => function () use (&$values) {
         return $values['package_name'];
     },
-    ':package_description'         => function () use (&$values) {
+    ':package_description' => function () use (&$values) {
         return $values['package_description'];
     },
-    ':styleci'                     => function () use (&$values) {
-        return $values['styleci'];
-    },
-    'OwenVoke\\Skeleton'             => function () use (&$values) {
+    'OwenVoke\\Skeleton' => function () use (&$values) {
         return $values['psr4_namespace'];
     },
 ];

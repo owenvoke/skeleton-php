@@ -4,9 +4,10 @@
     "description": ":package_description",
     "license": "MIT",
     "require": {
-        "php": "^7.4 || ^8.0"
+        "php": "^8.0"
     },
     "require-dev": {
+        "laravel/pint": "^1.0",
         "pestphp/pest": "^1.21.2",
         "phpstan/phpstan": "^1.4.5",
         "symfony/var-dumper": "^5.4.6 || ^6.0.6"
