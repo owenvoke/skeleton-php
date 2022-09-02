@@ -27,11 +27,8 @@ jobs:
           dependency-versions: highest
           composer-options: "--prefer-dist"
 
-      - name: Install Pint
-        run: composer global require laravel/pint --dev
-
       - name: Run Pint
-        run: pint --test --ansi
+        run: vendor/bin/pint --test --ansi
 
   phpstan:
     runs-on: ubuntu-latest
