@@ -23,9 +23,12 @@
         }
     },
     "scripts": {
+        "lint": "pint --ansi",
+        "test:lint": "pint --test --ansi",
         "test:types": "phpstan analyse --ansi --memory-limit=-1",
         "test:unit": "pest --colors=always",
         "test": [
+            "@test:lint",
             "@test:types",
             "@test:unit"
         ]
