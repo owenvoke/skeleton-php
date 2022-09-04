@@ -6,7 +6,7 @@ We accept contributions via Pull Requests on [Github](https://github.com/owenvok
 
 ## Pull Requests
 
-- **Laravel Coding Standard** - This is automatically linted by [Style CI](https://styleci.io).
+- **Laravel Coding Standard** - This is automatically linted by [Pint](https://github.com/laravel/pint).
 
 - **Add tests!** - If possible, try to add tests to support your patch.
 
