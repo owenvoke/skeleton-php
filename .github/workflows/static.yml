@@ -22,7 +22,7 @@ jobs:
           coverage: none
 
       - name: Install Dependencies
-        run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-progress --ansi
+        run: composer update --no-interaction --prefer-dist --no-progress --ansi
 
       - name: Run Pint
         run: vendor/bin/pint --test --ansi
