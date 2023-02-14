@@ -21,11 +21,8 @@ jobs:
           tools: composer
           coverage: none
 
-      - name: Install PHP dependencies
-        uses: ramsey/composer-install@v1
-        with:
-          dependency-versions: highest
-          composer-options: "--prefer-dist"
+      - name: Install Dependencies
+        run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-progress --ansi
 
       - name: Run Pint
         run: vendor/bin/pint --test --ansi
