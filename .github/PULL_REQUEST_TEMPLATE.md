@@ -2,4 +2,4 @@
 
 ...
 
-- [ ] I have read the **[CONTRIBUTING](https://github.com/owenvoke/skeleton-php/blob/main/.github/CONTRIBUTING.md)** document.
+Please check the **[CONTRIBUTING](https://github.com/owenvoke/.github/blob/main/CONTRIBUTING.md)** document for more information.
