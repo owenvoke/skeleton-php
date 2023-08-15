@@ -7,10 +7,10 @@
         "php": "^8.2"
     },
     "require-dev": {
-        "laravel/pint": "^1.7",
-        "pestphp/pest": "^2.0",
+        "laravel/pint": "^1.10",
+        "pestphp/pest": "^2.14",
         "phpstan/phpstan": "^1.10",
-        "symfony/var-dumper": "^6.2"
+        "symfony/var-dumper": "^6.3"
     },
     "autoload": {
         "psr-4": {
