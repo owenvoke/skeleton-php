@@ -7,8 +7,8 @@
         "php": "^8.2"
     },
     "require-dev": {
-        "laravel/pint": "^1.10",
-        "pestphp/pest": "^2.14",
+        "laravel/pint": "^1.13",
+        "pestphp/pest": "^2.20",
         "phpstan/phpstan": "^1.10",
         "symfony/var-dumper": "^6.3"
     },
