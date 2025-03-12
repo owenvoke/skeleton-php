@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 define('COL_DESCRIPTION', 0);
 define('COL_HELP', 1);
 define('COL_DEFAULT', 2);
