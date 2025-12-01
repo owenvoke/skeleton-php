@@ -1,0 +1,66 @@
+name: Auto-Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  resolve-version:
+    name: Resolve
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      new-release-published: ${{ steps.get-next-version.outputs.new-release-published }}
+      new-release-version: ${{ steps.get-next-version.outputs.new-release-version }}
+      new-release-git-tag: ${{ steps.get-next-version.outputs.new-release-git-tag }}
+      new-release-notes: ${{ steps.get-next-version.outputs.new-release-notes }}
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "lts/*"
+
+      - name: Install required dependencies
+        run: npm install -g semantic-release @owenvoke/semantic-release-config
+
+      - name: Resolve version
+        id: get-next-version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release -e @owenvoke/semantic-release-config --dry-run
+
+  release-draft:
+    name: Draft
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    needs: [resolve-version]
+    if: needs.resolve-version.outputs.new-release-published == 'true'
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Remove old drafts releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api repos/{owner}/{repo}/releases \
+            --jq '.[] | select(.draft == true) | .id' \
+            | xargs -I '{}' gh api -X DELETE repos/{owner}/{repo}/releases/{}
+
+      - name: Create draft release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.resolve-version.outputs.new-release-git-tag }}
+          draft: true
+          body: |
+            ${{ needs.resolve-version.outputs.new-release-notes }}
