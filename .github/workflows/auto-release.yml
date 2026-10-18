@@ -5,66 +5,8 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
-
 jobs:
-  resolve-version:
-    name: Resolve
-    runs-on: ubuntu-latest
+  release:
     permissions:
       contents: write
-    outputs:
-      new-release-published: ${{ steps.get-next-version.outputs.new-release-published }}
-      new-release-version: ${{ steps.get-next-version.outputs.new-release-version }}
-      new-release-git-tag: ${{ steps.get-next-version.outputs.new-release-git-tag }}
-      new-release-notes: ${{ steps.get-next-version.outputs.new-release-notes }}
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-        with:
-          node-version: "lts/*"
-
-      - name: Install required dependencies
-        run: npm install -g semantic-release @owenvoke/semantic-release-config
-
-      - name: Resolve version
-        id: get-next-version
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release -e @owenvoke/semantic-release-config --dry-run
-
-  release-draft:
-    name: Draft
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    needs: [resolve-version]
-    if: needs.resolve-version.outputs.new-release-published == 'true'
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-
-      - name: Remove old drafts releases
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh api repos/{owner}/{repo}/releases \
-            --jq '.[] | select(.draft == true) | .id' \
-            | xargs -I '{}' gh api -X DELETE repos/{owner}/{repo}/releases/{}
-
-      - name: Create draft release
-        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
-        with:
-          tag_name: ${{ needs.resolve-version.outputs.new-release-git-tag }}
-          draft: true
-          prerelease: ${{ startsWith('v0.', needs.resolve-version.outputs.new-release-git-tag) || contains('-next', needs.resolve-version.outputs.new-release-git-tag) }}
-          body: |
-            ${{ needs.resolve-version.outputs.new-release-notes }}
+    uses: owenvoke/semantic-release-config/.github/workflows/release.yml@main
